@@ -1,0 +1,12 @@
+{
+    "name": "loggingtools---log4js",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@log4js-node/smtp": "^1.1.0",
+        "log4js": "^6.3.0"
+    }
+}
