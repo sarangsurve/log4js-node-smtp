@@ -1,4 +1,10 @@
 var log4js = require("log4js");
+var config = require('./config');
 var log4jsConfig = require(__dirname+'/log4js.json');
+log4jsConfig.appenders.email.SMTP.auth.user = config.smtpUsername;
+log4jsConfig.appenders.email.SMTP.auth.pass = config.smtpPassword;
+log4jsConfig.appenders.email.sender = config.senderEmailAddress;
+log4jsConfig.appenders.email.recipients = config.receiverEmailAddresses;
+log4jsConfig.appenders.email.subject = config.emailSubject;
 log4js.configure(log4jsConfig);
 module.exports = log4js;

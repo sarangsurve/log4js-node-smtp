@@ -24,7 +24,7 @@
             "maxLogSize": 209715200,
             "keepFileExt": true
         },
-        "email1": {
+        "email": {
             "type": "@log4js-node/smtp",
             "SMTP": {
                 "host": "smtp.gmail.com",
@@ -36,19 +36,6 @@
             },
             "recipients": "recipientEmailAddress1@hostname",
             "subject": "Error logs"
-        },
-        "email2": {
-            "type": "@log4js-node/smtp",
-            "SMTP": {
-                "host": "smtp.hostaddress",
-                "port": 587,
-                "auth": {
-                    "user": "senderEmail@Address",
-                    "pass": "senderEmail@Password"
-                }
-            },
-            "recipients": "recipientEmailAddress2@hostname",
-            "subject": "Error logs"
         }
     },
     "categories": {
@@ -57,7 +44,7 @@
             "level": "info"
         },
         "error": {
-            "appenders": ["multi","stdout","email1","email2"],
+            "appenders": ["multi","stdout","email"],
             "level": "error"
         }
     }
